@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Dancing Script', cursive;
+    background: url('backgroundjoy.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    padding: 20px;
+}
+
+.login-box {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 40px;
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 35px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 20px;
+    font-family: 'Dancing Script', cursive;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    background: transparent;
+    outline: none;
+    transition: 0.3s;
+}
+
+label {
+    position: absolute;
+    top: 12px;
+    left: 0;
+    font-size: 20px;
+    color: #999;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+    top: -20px;
+    font-size: 16px;
+    color: #ff69b4;
+}
+
+.highlight {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background: #ff69b4;
+    transition: 0.3s;
+}
+
+input:focus ~ .highlight {
+    width: 100%;
+}
+
+.login-btn {
+    background: #ff69b4;
+    color: white;
+    padding: 15px 50px;
+    border: none;
+    border-radius: 30px;
+    font-size: 24px;
+    font-family: 'Dancing Script', cursive;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.login-btn:hover {
+    background: #ff4da6;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3);
+}
+
+.login-btn:active {
+    transform: translateY(0);
+}
+
+.extra-links {
+    margin-top: 30px;
+}
+
+.extra-links a {
+    color: #666;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.extra-links a:hover {
+    color: #ff69b4;
+}
+
+@media (max-width: 480px) {
+    .login-box {
+        padding: 20px;
+        margin: 0 15px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    input, label {
+        font-size: 18px;
+    }
+
+    .login-btn {
+        padding: 12px 40px;
+        font-size: 20px;
+    }
+} 
